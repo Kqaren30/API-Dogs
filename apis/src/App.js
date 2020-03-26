@@ -63,6 +63,7 @@ function App() {
   } 
 
   function onChange(value){
+    if(value[0])
     setDogType(value[0]);
   }
 
@@ -80,7 +81,7 @@ function App() {
      <Card
      hoverable
      style={{margin:10}}
-     cover={<img alt="puppy" src={dog} style={{height:300}}/>}
+     cover={<img alt="puppy" src={dog} style={{height:300,objectFit:'cover'}}/>}
    >
    <Meta title={dogType.toUpperCase()} />
    </Card>
